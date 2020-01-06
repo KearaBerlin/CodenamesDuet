@@ -1,15 +1,8 @@
 <script>
 
 function show_random_board() {
-
-  // make all beige
-  let all = [];
-  for (i=1; i<6; i++) {
-    for (j=1; j<6; j++) {
-      let coord = i.toString() + j.toString();
-      document.getElementById(coord).style.backgroundColor = "linen";
-    }
-  }
+  
+  clear_board();
   
   var coords = [];
   for (i = 0; i < 9; i+=0) {
@@ -52,6 +45,17 @@ function makeBlack(coord) {
   document.getElementById(coord).style.backgroundColor = "black";
 }
 
+function clear_board() {
+  // make all beige
+  let all = [];
+  for (i=1; i<6; i++) {
+    for (j=1; j<6; j++) {
+      let coord = i.toString() + j.toString();
+      document.getElementById(coord).style.backgroundColor = "linen";
+    }
+  }
+}
+
 </script>
 
 <style>
@@ -64,6 +68,7 @@ td {
 
 <p>Codenames: Duet</p>
 <input type=button onClick="show_random_board()" value="Generate random board">
+<input type=button onClick="clear_board()" value="Clear board">
 <table>
 	<tr>
     	<td id="11"></td>
