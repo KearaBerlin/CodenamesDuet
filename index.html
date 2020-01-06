@@ -31,7 +31,7 @@ function show_random_board() {
   	let row = getRandomInt(5);
     let col = getRandomInt(5);
     let coord = row.toString() + col.toString();
-    if (!coords.includes(coord) + !blackCoords.includes(coord)) {
+    if (!coords.includes(coord) && !blackCoords.includes(coord)) {
       blackCoords.push(coord);
       i++;
     }
